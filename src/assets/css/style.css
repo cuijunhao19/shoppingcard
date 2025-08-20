@@ -1,0 +1,190 @@
+/* srcsrc/assets/css/style.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+.box {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+/* 标题栏样式 */
+.title {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  background-color: #f9fafb;
+  border-bottom: 1px solid #eee;
+  font-weight: 600;
+  color: #666;
+}
+
+/* 列布局 - 均匀分配空间 */
+.title span {
+  flex: 1;
+  text-align: center;
+}
+
+/* 调整第一列和最后一列宽度 */
+.title .check,
+.title .operation {
+  flex: 0.5;
+}
+
+.title .name {
+  flex: 2;
+  text-align: left;
+  padding-left: 40px;
+}
+
+/* 商品列表样式 */
+.main {
+  border-bottom: 1px solid #eee;
+}
+
+.goods {
+  display: flex;
+  align-items: center;
+  padding: 16px 20px;
+  border-bottom: 1px solid #f1f1f1;
+  transition: background-color 0.2s;
+}
+
+.goods:hover {
+  background-color: #fafafa;
+}
+
+/* 商品列布局 - 与标题对应 */
+.goods span {
+  flex: 1;
+  text-align: center;
+}
+
+.goods .check {
+  flex: 0.5;
+}
+
+.goods .name {
+  flex: 2;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.goods .name img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 1px solid #eee;
+}
+
+.goods .operation {
+  flex: 0.5;
+}
+
+/* 数量调整按钮 */
+.num {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.num span {
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  line-height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.num span:not(.off) {
+  background-color: #f1f1f1;
+  transition: background-color 0.2s;
+}
+
+.num span:not(.off):hover {
+  background-color: #e0e0e0;
+}
+
+.num span.off {
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+/* 结算信息栏 */
+.info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  background-color: #f9fafb;
+}
+
+.info span {
+  margin: 0 12px;
+}
+
+.info .totalNUmber,
+.info .totalPrize {
+  color: #ff4d4f;
+  font-weight: 600;
+}
+
+.info span:last-child {
+  background-color: #42b983;
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.info span:last-child:hover {
+  background-color: #359e75;
+}
+
+/* 空购物车提示 */
+.box > div:not(.title):not(.info) {
+  padding: 60px 20px;
+  text-align: center;
+  color: #999;
+}
+
+/* 复选框样式优化 */
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: #42b983;
+  cursor: pointer;
+}
+
+/* 删除按钮样式 */
+.operation a {
+  color: #ff4d4f;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.operation a:hover {
+  color: #d93025;
+  text-decoration: underline;
+}

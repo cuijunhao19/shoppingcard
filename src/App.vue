@@ -1,32 +1,28 @@
+<script>
+// 引入组件
+import ShoppingCard from './components/ShoppingCard.vue'
+export default {
+  name: 'app',
+  components: {
+    ShoppingCard
+  }
+}
+</script>
+
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+  <div class="box">
+    <div class="title">
+      <span class="check">选择</span>
+      <span class="name">商品信息</span>
+      <span class="unitPrize">商品单价</span>
+      <span class="num">商品数量</span>
+      <span class="unitTotalPrize">商品金额</span>
+      <span class="operation">操作</span>
+    </div>
+    <ShoppingCard />
   </div>
 </template>
 
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
+@import './assets/css/style.css';
 </style>
